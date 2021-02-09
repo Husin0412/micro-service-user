@@ -6,8 +6,20 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
 
     await queryInterface.bulkInsert('users', [{
+      name: 'Supersu',
+      profession: "Super Admin",
+      guid: 1,
+      role: "supersu",
+      email: "supersu@yopmail.com",
+      password: await bcrypt.hash('supersu123', 10),
+      avatar: "https://dirtyunicorns.com/wp-content/uploads/2016/09/supersu.png",
+      created_at: new Date(),
+      updated_at: new Date
+    },
+    {
         name: 'Husin',
         profession: "Admin Micro",
+        guid: 2,
         role: "admin",
         email: "husinsandjaya@yopmail.com",
         password: await bcrypt.hash('husin123', 10),
@@ -18,6 +30,7 @@ module.exports = {
       {
         name: 'Apro Fitria',
         profession: "programer develover",
+        guid: 0,
         role: "student",
         email: "AproFitri@yopmail.com",
         password: await bcrypt.hash('apro123', 10),
@@ -28,6 +41,7 @@ module.exports = {
       {
         name: 'Marwah',
         profession: "Mahasiswa",
+        guid: 0,
         role: "student",
         email: "marwah@yopmail.com",
         password: await bcrypt.hash('marwah123', 10),
@@ -38,6 +52,7 @@ module.exports = {
       {
         name: 'Saputra Harahap',
         profession: "pengamen suka ngoding",
+        guid: 0,
         role: "student",
         email: "saputra@yopmail.com",
         password: await bcrypt.hash('apro123', 10),
@@ -48,6 +63,7 @@ module.exports = {
       {
         name: 'Sumanto Komandanu',
         profession: "juragan baso koding",
+        guid: 0,
         role: "student",
         email: "sumanto@yopmail.com",
         password: await bcrypt.hash('apro123', 10),

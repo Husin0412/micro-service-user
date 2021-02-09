@@ -9,6 +9,11 @@ module.exports = {
         primaryKey: true,
         allowNull: false
       }, 
+      guid: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+        allowNull: false
+      },
       name: {
         type: Sequelize.STRING,
         allowNull: false
@@ -23,7 +28,7 @@ module.exports = {
       },
       role: {
         type: Sequelize.ENUM,
-        values: ['admin', 'student'],
+        values: ['supersu', 'admin', 'student'],
         allowNull: false
       },
       email: {

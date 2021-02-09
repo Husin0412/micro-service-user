@@ -5,7 +5,7 @@ module.exports = async (req, res) => {
     const userIds = req.query.user_ids || [];
 
     const sqlOptions = {
-        attributes: ['id', 'name', 'email', 'role', 'profession', 'avatar', 'created_at', 'updated_at']
+        attributes: ['id', 'guid', 'name', 'email', 'role', 'profession', 'avatar', 'created_at', 'updated_at']
     }
 
     if(userIds.length) {

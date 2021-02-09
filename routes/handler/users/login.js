@@ -40,6 +40,7 @@ module.exports = async (req, res) => {
         status: 'success',
         data: {
             id: user.id,
+            guid: user.guid,
             name: user.name,
             email: user.email,
             role: user.role,

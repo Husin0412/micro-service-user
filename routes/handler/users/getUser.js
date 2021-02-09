@@ -4,7 +4,7 @@ module.exports = async (req, res) => {
     const id = req.params.id;
 
     const user = await User.findByPk(id, {
-        attributes: ['id', 'guid', 'name', 'email', 'role', 'profession', 'avatar', 'created_at']
+        attributes: ['id', 'guid', 'name', 'email', 'role', 'profession', 'avatar', 'created_at', 'updated_at']
     });
 
     if(!user) {

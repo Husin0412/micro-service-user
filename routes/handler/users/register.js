@@ -38,7 +38,8 @@ module.exports = async (req, res) => {
         name: req.body.name,
         email: req.body.email,
         profession: req.body.profession,
-        role: "student"
+        role: req.body.role ?? "student",
+        guid: req.body.guid ?? 0
     }
 
     const createdUser = await User.create(data);

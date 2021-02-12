@@ -16,7 +16,7 @@ module.exports = {
       created_at: new Date(),
       updated_at: new Date
     },
-    {
+      {
         name: 'Husin',
         profession: "Admin Micro",
         guid: 2,
@@ -24,6 +24,17 @@ module.exports = {
         email: "husinsandjaya@yopmail.com",
         password: await bcrypt.hash('husin123', 10),
         avatar: "https://fitrianamaya.files.wordpress.com/2014/01/600full-nicholas-saputra.jpg",
+        created_at: new Date(),
+        updated_at: new Date
+      },
+      {
+        name: 'Admin Kita',
+        profession: "Admin Microservice",
+        guid: 2,
+        role: "admin",
+        email: "adminkita@yopmail.com",
+        password: await bcrypt.hash('admin123', 10),
+        avatar: "https://lh3.googleusercontent.com/proxy/fWlzxN5koOj8u5LVOavz6oalJ7ctPCzjtcOeMK8PjAyCW4qCpK4Xt9sMmjbwaWwU7eYYCc6Kljmaob2g7yjtQ9x_rnjOPSgajHr94EXpEnOsvrvvsyWTcOtC1PYN-NJiZuGg4OeC-A",
         created_at: new Date(),
         updated_at: new Date
       },

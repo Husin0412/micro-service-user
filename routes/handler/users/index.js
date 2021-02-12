@@ -11,5 +11,5 @@ module.exports = {
     update,
     getUser,
     getUsers,
-    logout
+    logout,
 }

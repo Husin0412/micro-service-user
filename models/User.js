@@ -7,6 +7,11 @@ module.exports = ( sequelize, DataTypes ) => {
             primaryKey: true,
             allowNull: false
         },
+        guid: {
+            type: DataTypes.INTEGER,
+            allowNul: false,
+            defaultValue: 0
+        },
         name: {
             type: DataTypes.STRING,
             allowNul: false

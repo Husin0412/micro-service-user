@@ -9,6 +9,7 @@ router.post('/logout', userHandler.logout);
 router.put('/:id', userHandler.update);
 router.get('/:id', userHandler.getUser);
 router.get('/', userHandler.getUsers);
+router.delete('/:id', userHandler.destroy);
 
 
 module.exports = router;

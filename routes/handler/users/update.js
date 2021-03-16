@@ -7,7 +7,6 @@ module.exports = async (req, res) => {
     const schema = {
         name: 'string|empty:false',
         email: 'email|empty:false',
-        password: 'string|min:6',
         profession: 'string|optional',
         avatar: 'string|optional' 
     };
@@ -38,25 +37,37 @@ module.exports = async (req, res) => {
         if( checkEmail && email !== user.email ) {
             return res.status(409).json({
                 status: 'error',
-                message: 'eamil already exist'
+                message: 'email already exist'
             })
         }
     }
 
-    const password = await bcrypt.hash(req.body.password, 10);
     const {
         name,
         profession,
         avatar
     } = req.body;
 
-    await user.update({
-        email,
-        password,
+    data_update = {
         name,
+        email,
         profession,
         avatar
-    })
+    }
+
+    if(req.body.password) 
+    {
+        const password = await bcrypt.hash(req.body.password, 10);
+        data_update = {
+            email,
+            name,
+            profession,
+            avatar,
+            password
+        }
+    }
+
+    await user.update(data_update)
 
     return res.status(200).json({
         status: 'success',

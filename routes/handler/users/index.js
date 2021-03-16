@@ -4,6 +4,7 @@ const update = require('./update');
 const getUser = require('./getUser');
 const getUsers = require('./getUsers');
 const logout = require('./logout');
+const destroy = require('./destroy');
 
 module.exports = {
     register,
@@ -12,4 +13,5 @@ module.exports = {
     getUser,
     getUsers,
     logout,
+    destroy
 }
